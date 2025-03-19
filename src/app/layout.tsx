@@ -13,9 +13,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="kor">
-      <body>
-        <main>{children}</main>
-      </body>
+      <body>{children}</body>
     </html>
   );
 }

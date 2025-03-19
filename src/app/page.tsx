@@ -1,5 +1,15 @@
+import Header from "./components/Header";
+import IntroduceSection from "./components/IntroduceSection";
+
 const Page = () => {
-  return <div>포트폴리오</div>;
+  return (
+    <>
+      <Header />
+      <main>
+        <IntroduceSection />
+      </main>
+    </>
+  );
 };
 
 export default Page;
