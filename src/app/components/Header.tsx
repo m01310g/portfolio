@@ -2,6 +2,8 @@
 
 import { useEffect, useState } from "react";
 import { CustomHeader } from "./Header.styled";
+import HamburgerMenu from "./HamburgerMenu";
+import MenuButton from "./MenuButton";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -24,6 +26,11 @@ const Header = () => {
   return (
     <CustomHeader $isScrolled={isScrolled}>
       <h1>MinKyoung_Portfolio.tsx</h1>
+      <HamburgerMenu />
+      <MenuButton content="Introduce" />
+      <MenuButton content="Skills" />
+      <MenuButton content="Projects" />
+      <MenuButton content="About_Me" />
     </CustomHeader>
   );
 };

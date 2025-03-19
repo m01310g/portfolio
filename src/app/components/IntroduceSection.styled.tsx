@@ -9,6 +9,7 @@ export const IntroSection = styled.section`
   flex-direction: row;
   justify-content: center;
   gap: 1rem;
+  height: 100vh;
 
   @media (max-width: 768px) {
     align-items: center;
@@ -95,13 +96,15 @@ export const DetailWrapper = styled.div`
 
 export const ImageWrapper = styled.div`
   display: flex;
-  padding-top: 8.5rem;
+  /* padding-top: 8.5rem; */
+  justify-content: flex-end;
+  flex-direction: column;
   order: -1;
 
   img {
     width: 400px;
     max-width: 400px;
-    height: auto;
+    height: fit-content;
 
     @media (max-width: 1024px) {
       max-width: 300px;
