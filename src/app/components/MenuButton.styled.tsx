@@ -29,12 +29,7 @@ export const Button = styled.button<{
     display: none;
   }
 
-  @media (min-width: 768px) and (max-width: 1023px) {
-    font-size: ${(props) =>
-      props.$isActive ? "var(--font-size-base)" : "var(--font-size-sm)"};
-  }
-
-  @media (min-width: 1024px) {
+  @media (min-width: 768px) {
     font-size: ${(props) =>
       props.$isActive ? "var(--font-size-lg)" : "var(--font-size-base)"};
   }

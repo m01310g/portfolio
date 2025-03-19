@@ -1,7 +1,7 @@
 const SkillsSection = () => {
   return (
-    <section>
-      <h1 id="Skills">Skills</h1>
+    <section id="Skills">
+      <h1>Skills</h1>
     </section>
   );
 };

@@ -33,9 +33,8 @@ export const CustomHeader = styled.header<{ $isScrolled: boolean }>`
   }
 
   .menu-img {
-    @media (min-width: 768px) {
-      color: ${(props) =>
-        props.$isScrolled ? "var(--black-color)" : "var(--green-color)"};
+    @media (max-width: 768px) {
+      color: var(--black-color);
     }
   }
 `;

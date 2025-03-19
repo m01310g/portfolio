@@ -4,7 +4,6 @@ const HamburgerMenu = () => {
   return (
     <>
       <Button>
-        {/* 햄버거 버튼 */}
         <svg
           className="menu-img"
           width="30"
