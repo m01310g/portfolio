@@ -34,6 +34,9 @@ const IntroduceSection = () => {
         </DetailWrapper>
       </div>
       <ImageWrapper>
+        <h1 id="Introduce">
+          <span>&lt;</span>Introduce <span>/&gt;</span>
+        </h1>
         <Image
           src={"/intro.png"}
           width={400}

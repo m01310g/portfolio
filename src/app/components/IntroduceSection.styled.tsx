@@ -95,10 +95,19 @@ export const DetailWrapper = styled.div`
 
 export const ImageWrapper = styled.div`
   display: flex;
-  /* padding-top: 8.5rem; */
-  justify-content: flex-end;
+  justify-content: space-between;
   flex-direction: column;
   order: -1;
+
+  h1 {
+    font-family: "DungGeunMo";
+    padding-top: 5rem;
+    color: var(--secondary-color);
+
+    span {
+      color: var(--skyblue-color);
+    }
+  }
 
   img {
     width: 400px;

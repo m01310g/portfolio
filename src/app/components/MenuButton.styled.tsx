@@ -1,11 +1,20 @@
 import styled from "styled-components";
 
-export const Button = styled.button`
+export const Button = styled.button<{
+  $isActive: boolean;
+  $isScrolled: boolean;
+}>`
   color: var(--secondary-color);
   font-family: "DungGeunMo";
-  background-color: transparent;
+  background-color: ${(props) =>
+    props.$isActive
+      ? props.$isScrolled
+        ? "rgb(0,0,0,0.05)"
+        : "var(--active-color)"
+      : "transparent"};
   cursor: pointer;
   border: none;
+  padding: 1rem 1rem;
 
   span {
     color: var(--skyblue-color);
@@ -21,10 +30,12 @@ export const Button = styled.button`
   }
 
   @media (min-width: 768px) and (max-width: 1023px) {
-    font-size: var(--font-size-sm);
+    font-size: ${(props) =>
+      props.$isActive ? "var(--font-size-base)" : "var(--font-size-sm)"};
   }
 
   @media (min-width: 1024px) {
-    font-size: var(--font-size-base);
+    font-size: ${(props) =>
+      props.$isActive ? "var(--font-size-lg)" : "var(--font-size-base)"};
   }
 `;
