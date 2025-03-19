@@ -3,7 +3,6 @@ import styled from "styled-components";
 export const IntroSection = styled.section`
   width: 100%;
   height: fit-content;
-  background-color: var(--primary-color);
   padding: 3rem 1.5rem 0 1.5rem;
   display: flex;
   flex-direction: row;
