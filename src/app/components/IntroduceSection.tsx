@@ -11,7 +11,7 @@ import Image from "next/image";
 
 const IntroduceSection = () => {
   const handleMoreButtonClick = () => {
-    document.querySelector("#Skills")?.scrollIntoView({ behavior: "smooth" });
+    document.querySelector("#Skills ")?.scrollIntoView({ behavior: "smooth" });
   };
 
   return (

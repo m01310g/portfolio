@@ -1,8 +1,14 @@
+"use client";
+
+import { SkillSection } from "./SkillsSection.styled";
+
 const SkillsSection = () => {
   return (
-    <section id="Skills">
-      <h1>Skills</h1>
-    </section>
+    <SkillSection id="Skills">
+      <h1>
+        <span>&lt;</span>Skills <span>/&gt;</span>
+      </h1>
+    </SkillSection>
   );
 };
 
