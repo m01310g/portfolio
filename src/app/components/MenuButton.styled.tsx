@@ -9,7 +9,7 @@ export const Button = styled.button<{
   background-color: ${(props) =>
     props.$isActive
       ? props.$isScrolled
-        ? "rgb(0,0,0,0.05)"
+        ? "rgb(0, 0, 0, 0.05)"
         : "var(--active-color)"
       : "transparent"};
   cursor: pointer;
@@ -20,7 +20,7 @@ export const Button = styled.button<{
     color: var(--skyblue-color);
   }
 
-  &:hover {
+  :hover {
     transform: scale(1.2);
     transition: transform 0.3s ease-in-out;
   }

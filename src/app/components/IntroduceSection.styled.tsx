@@ -168,51 +168,7 @@ export const MoreButton = styled.button`
   background-color: var(--yellow-color);
   cursor: pointer;
 
-  &:hover {
+  :hover {
     background-color: #e8bd69;
   }
 `;
-
-// export const ImageWrapper = styled.div`
-//   display: flex;
-//   justify-content: flex-end;
-//   flex-direction: column;
-//   order: -1;
-
-//   img {
-//     width: 400px;
-//     max-width: 400px;
-//     height: fit-content;
-
-//     @media (max-width: 768px) {
-//       max-width: 300px;
-//       width: 300px;
-//     }
-//   }
-
-//   @media (max-width: 768px) {
-//     order: 0;
-//     padding-top: 0;
-//   }
-// `;
-
-// export const MoreButton = styled.button`
-//   width: 10rem;
-//   height: 3rem;
-//   padding: 1rem;
-//   align-self: center;
-//   justify-self: center;
-//   border-radius: 30px;
-//   font-family: "DungGeunMo";
-//   background-color: var(--yellow-color);
-//   cursor: pointer;
-
-//   &:hover {
-//     background-color: #e8bd69;
-//   }
-
-//   @media (max-width: 768px) {
-//     align-self: flex-end;
-//     order: 1;
-//   }
-// `;
