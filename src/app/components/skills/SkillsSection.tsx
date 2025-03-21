@@ -1,5 +1,6 @@
 "use client";
 
+import SkillList from "./SkillList";
 import { SkillSection } from "./SkillsSection.styled";
 
 const SkillsSection = () => {
@@ -8,6 +9,7 @@ const SkillsSection = () => {
       <h1>
         <span>&lt;</span>Skills <span>/&gt;</span>
       </h1>
+      <SkillList />
     </SkillSection>
   );
 };

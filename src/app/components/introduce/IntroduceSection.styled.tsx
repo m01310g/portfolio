@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const IntroSection = styled.section`
   width: 100%;
-  padding: 5rem 1.5rem 0 1.5rem;
+  padding: 5rem 1.5rem 1rem 1.5rem;
   display: flex;
   flex-direction: column;
   height: 100vh;
