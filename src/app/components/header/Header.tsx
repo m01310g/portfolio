@@ -2,8 +2,8 @@
 
 import { useEffect, useState } from "react";
 import { CustomHeader } from "./Header.styled";
-import HamburgerMenu from "./HamburgerMenu";
-import MenuButton from "./MenuButton";
+import HamburgerMenu from "../menu/HamburgerMenu";
+import MenuButton from "../menu/MenuButton";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);

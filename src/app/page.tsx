@@ -1,8 +1,8 @@
 import AboutSection from "./components/AboutSection";
-import Header from "./components/Header";
-import IntroduceSection from "./components/IntroduceSection";
+import Header from "./components/header/Header";
+import IntroduceSection from "./components/introduce/IntroduceSection";
 import ProjectsSection from "./components/ProjectsSection";
-import SkillsSection from "./components/SkillsSection";
+import SkillsSection from "./components/skills/SkillsSection";
 
 const Page = () => {
   return (
