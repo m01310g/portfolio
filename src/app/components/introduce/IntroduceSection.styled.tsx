@@ -8,15 +8,6 @@ export const IntroSection = styled.section`
   height: 100vh;
   gap: 1rem;
 
-  h1 {
-    font-family: "DungGeunMo";
-    color: var(--secondary-color);
-
-    span {
-      color: var(--skyblue-color);
-    }
-  }
-
   @media (max-width: 1024px) {
     height: auto;
   }

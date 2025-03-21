@@ -1,5 +1,6 @@
 "use client";
 
+import Title from "../title/Title";
 import {
   ContentWrapper,
   DetailWrapper,
@@ -16,9 +17,7 @@ const IntroduceSection = () => {
 
   return (
     <IntroSection id="Introduce">
-      <h1>
-        <span>&lt;</span>Introduce <span>/&gt;</span>
-      </h1>
+      <Title title="Introduce" />
       <div className="intro-container">
         <div className="content">
           <ContentWrapper>
