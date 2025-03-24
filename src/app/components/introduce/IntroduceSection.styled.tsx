@@ -86,7 +86,7 @@ export const DetailWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  padding: 1rem 0 5rem 0;
+  padding: 1rem 0;
 
   div {
     color: var(--orange-color);
