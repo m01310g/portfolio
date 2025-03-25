@@ -7,7 +7,7 @@ export const SkillBox = styled.div`
   padding: 1.5rem;
   justify-content: center;
   align-items: center;
-  border-radius: 80px;
+  border-radius: 16px;
   gap: 1rem;
 
   h2 {
