@@ -5,4 +5,16 @@ export const ProjectSection = styled.section`
   gap: 1rem;
   display: flex;
   flex-direction: column;
+
+  @media (max-width: 768px) {
+    align-items: center;
+    flex-direction: column;
+  }
+`;
+
+export const ProjectGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.5rem;
+  width: 100%;
 `;
