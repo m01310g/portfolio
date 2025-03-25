@@ -4,7 +4,7 @@ import { ProjectGrid, ProjectSection } from "./ProjectsSection.styled";
 
 const ProjectsSection = () => {
   return (
-    <ProjectSection>
+    <ProjectSection id="Projects">
       <Title title="Projects" />
       <ProjectGrid>
         <ProjectItem
