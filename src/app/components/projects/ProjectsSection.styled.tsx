@@ -17,4 +17,8 @@ export const ProjectGrid = styled.div`
   grid-template-columns: repeat(2, 1fr);
   gap: 0.5rem;
   width: 100%;
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(1, 1fr);
+  }
 `;
