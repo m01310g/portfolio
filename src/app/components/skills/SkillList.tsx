@@ -1,4 +1,4 @@
-import { Skills } from "../../../../constants/Skills";
+import { SKILLS } from "../../../../constants/SKILLS";
 import { SkillBox } from "./SkillList.styled";
 
 const SkillList = () => {
@@ -7,7 +7,7 @@ const SkillList = () => {
       <SkillBox>
         <h2>많이 해봤어요</h2>
         <ul>
-          {Skills.familiar.map((skill) => (
+          {SKILLS.familiar.map((skill) => (
             <li key={skill.name}>
               <div>
                 <i className={skill.icon}></i>
@@ -20,7 +20,7 @@ const SkillList = () => {
       <SkillBox>
         <h2>해본 적 있어요</h2>
         <ul>
-          {Skills.experienced.map((skill) => (
+          {SKILLS.experienced.map((skill) => (
             <li key={skill.name}>
               <div>
                 <i className={skill.icon}></i>

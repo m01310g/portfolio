@@ -1,4 +1,4 @@
-export const Skills = {
+export const SKILLS = {
   familiar: [
     { name: "React.js", icon: "devicon-react-original colored" },
     { name: "JavaScript(ES6+)", icon: "devicon-javascript-plain colored" },
