@@ -14,35 +14,27 @@ import {
 import Image from "next/image";
 import FullScreenImageModal from "./FullScreenImageModal";
 import CloseButton from "../closeButton/CloseButton";
+import { Project } from "./types/project";
 
 interface ProjectModalProps {
   isOpen: boolean;
   onClose: () => void;
-  children?: ReactNode;
-  period: string;
-  title: string;
-  tag: string[];
-  thumbnail: string;
-  outline: string;
-  features: string[];
-  contributions: string[];
-  screenshots: string[];
+  project: Project;
 }
 
-const ProjectModal = ({
-  isOpen,
-  onClose,
-  children,
-  period,
-  title,
-  tag,
-  thumbnail,
-  outline,
-  features,
-  contributions,
-  screenshots,
-}: ProjectModalProps) => {
+const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) => {
   if (!isOpen) return null;
+
+  const {
+    period,
+    title,
+    tag,
+    thumbnail,
+    outline,
+    features,
+    contributions,
+    screenshots,
+  } = project;
 
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
 
@@ -59,7 +51,6 @@ const ProjectModal = ({
 
   return (
     <ModalOverlay onClick={onClose}>
-      {" "}
       <CloseButton onClose={onClose} />
       <ModalContainer onClick={(e) => e.stopPropagation()}>
         <ModalContent>
@@ -68,7 +59,9 @@ const ProjectModal = ({
             <h2>{title}</h2>
             <TagList>
               {tag.map((t, idx) => (
-                <Tag key={idx}>{t}</Tag>
+                <Tag key={idx} $type={t}>
+                  {t}
+                </Tag>
               ))}
             </TagList>
           </header>

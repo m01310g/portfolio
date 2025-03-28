@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import { getTagColor } from "../../../../utils/getTagColor";
+import { isLightColor } from "../../../../utils/isLightColor";
 
 export const ModalOverlay = styled.div`
   position: fixed;
@@ -40,10 +42,11 @@ export const ModalContent = styled.div`
     color: var(--white-color);
     align-items: center;
     background-color: var(--hover-color);
-    padding: 1rem 2rem;
+    padding: 1.5rem 2rem;
 
     .period {
       color: var(--period-color);
+      line-height: 1;
     }
   }
 
@@ -58,7 +61,7 @@ export const ModalContent = styled.div`
       border-radius: 10px;
       border: none;
       aspect-ratio: 16/9;
-      object-fit: cover;
+      object-fit: contain;
     }
   }
 `;
@@ -69,9 +72,12 @@ export const TagList = styled.div`
   gap: 0.5rem;
 `;
 
-export const Tag = styled.span`
-  background-color: var(--white-color);
-  color: var(--black-color);
+export const Tag = styled.span<{ $type: string }>`
+  background-color: ${({ $type }) => getTagColor($type)};
+  color: ${({ $type }) =>
+    isLightColor(getTagColor($type))
+      ? "var(--black-color)"
+      : "var(--white-color)"};
   padding: 0 0.6rem;
   border-radius: 10px;
   font-size: var(--font-size-sm);
@@ -81,6 +87,8 @@ export const Outline = styled.p`
   font-weight: 500;
   text-align: center;
   line-height: 1.6;
+  font-size: var(--font-size-sm);
+  white-space: pre-line;
 
   &::before,
   &::after {
@@ -110,6 +118,7 @@ export const FeatureList = styled.div`
     padding-left: 2rem;
     list-style-type: disc;
     font-weight: 500;
+    font-size: var(--font-size-sm);
   }
 `;
 
@@ -122,6 +131,7 @@ export const ContributionList = styled.div`
     padding-left: 2rem;
     list-style-type: disc;
     font-weight: 500;
+    font-size: var(--font-size-sm);
   }
 `;
 

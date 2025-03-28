@@ -8,16 +8,16 @@ import {
 } from "./ProjectItem.styled";
 import Image from "next/image";
 import ProjectModal from "./ProjectModal";
+import { Project } from "./types/project";
 
 interface ProjectItemProps {
-  title: string;
-  img: string;
-  period: string;
-  tag: string[];
+  project: Project;
 }
 
-const ProjectItem = ({ title, img, period, tag }: ProjectItemProps) => {
+const ProjectItem = ({ project }: ProjectItemProps) => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
+
+  const { period, title, tag, description, thumbnail } = project;
 
   return (
     <>
@@ -25,7 +25,7 @@ const ProjectItem = ({ title, img, period, tag }: ProjectItemProps) => {
         <ImageBox>
           <Image
             className="project-image"
-            src={img}
+            src={thumbnail}
             alt={`${title} 이미지`}
             width={100}
             height={100}
@@ -33,10 +33,13 @@ const ProjectItem = ({ title, img, period, tag }: ProjectItemProps) => {
         </ImageBox>
         <ContentBox>
           <h3 className="title">{title}</h3>
-          <span className="period">{period}</span>
+          <p className="period">{period}</p>
+          <p className="description">{description}</p>
           <TagList>
             {tag.map((t, idx) => (
-              <Tag key={idx}>{t}</Tag>
+              <Tag key={idx} $type={t}>
+                {t}
+              </Tag>
             ))}
           </TagList>
         </ContentBox>
@@ -46,14 +49,7 @@ const ProjectItem = ({ title, img, period, tag }: ProjectItemProps) => {
         <ProjectModal
           isOpen={isOpen}
           onClose={() => setIsOpen(false)}
-          period="2020-2025"
-          title="어쩌구 저쩌구"
-          thumbnail="/intro.png"
-          tag={["React"]}
-          outline="프로젝트 개요입니다 프로젝트 개요입니다 프로젝트 개요입니다 "
-          features={["dddd", "eeeee"]}
-          contributions={["dddd", "ttttt"]}
-          screenshots={["/project1/천.png", "/project1/사.png", "/intro.png"]}
+          project={project}
         />
       )}
     </>
