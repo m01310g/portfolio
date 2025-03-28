@@ -1,6 +1,6 @@
 "use client";
 
-import AboutSection from "./components/AboutSection";
+import AboutSection from "./components/about/AboutSection";
 import Header from "./components/header/Header";
 import IntroduceSection from "./components/introduce/IntroduceSection";
 import ProjectsSection from "./components/projects/ProjectsSection";
