@@ -2,11 +2,13 @@ import styled from "styled-components";
 
 export const IntroSection = styled.section`
   width: 100%;
-  padding: 5rem 1.5rem 1rem 1.5rem;
+  max-width: 50rem;
+  padding: 5rem 3rem 1rem 3rem;
   display: flex;
   flex-direction: column;
   height: 100vh;
   gap: 1rem;
+  align-self: center;
 
   @media (max-width: 1024px) {
     height: auto;
@@ -20,6 +22,7 @@ export const IntroSection = styled.section`
   .content {
     display: flex;
     flex-direction: column;
+    max-width: 30rem;
 
     @media (max-width: 1024px) {
       text-align: center;
@@ -100,6 +103,7 @@ export const DetailWrapper = styled.div`
 
   @media (max-width: 1024px) {
     padding: 1rem 0;
+    align-items: center;
   }
 
   span {

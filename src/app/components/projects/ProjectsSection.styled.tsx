@@ -5,6 +5,9 @@ export const ProjectSection = styled.section`
   gap: 1rem;
   display: flex;
   flex-direction: column;
+  max-width: 50rem;
+  width: 100%;
+  align-self: center;
 
   @media (max-width: 768px) {
     align-items: center;
