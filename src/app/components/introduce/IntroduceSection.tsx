@@ -32,7 +32,7 @@ const IntroduceSection = () => {
           <DetailWrapper>
             <div>
               개발자의 가치는 <span>소통 능력</span>에서 나온다고 생각합니다. 더
-              좋은 서비스를 만들기 위해 동료와{" "}
+              좋은 서비스를 만들기 위해 동료와&nbsp;
               <span>적극적으로 소통하고 협업</span>하며 고민합니다. 새로운
               기술이 끊임 없이 발전하는 환경에서도 <span>꾸준한 학습</span>과
               <br />
