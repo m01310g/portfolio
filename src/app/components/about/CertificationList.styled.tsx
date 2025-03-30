@@ -9,10 +9,12 @@ export const CertificationItem = styled.div`
   display: flex;
   gap: 0.5rem;
   justify-content: space-between;
+  align-items: center;
 
   h3 {
     color: var(--white-color);
     line-height: 1;
+    width: 12rem;
   }
 
   p {

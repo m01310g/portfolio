@@ -11,5 +11,6 @@ export const SkillSection = styled.section`
 
   @media (max-width: 768px) {
     align-items: center;
+    max-width: 40rem;
   }
 `;

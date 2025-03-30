@@ -8,7 +8,7 @@ export const Button = styled.button`
   .menu-img {
     color: var(--black-color);
 
-    @media (min-width: 1024px) {
+    @media (min-width: 1025px) {
       display: none;
     }
   }

@@ -6,7 +6,7 @@ export const CustomHeader = styled.header<{ $isScrolled: boolean }>`
   top: 0;
   left: 0;
   height: 4rem;
-  padding: 1rem 3rem;
+  padding: 1rem 1.5rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -19,7 +19,7 @@ export const CustomHeader = styled.header<{ $isScrolled: boolean }>`
     props.$isScrolled ? "0 2px 10px rgba(220, 220, 220, 0.1)" : "none"};
   z-index: 100;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1024px) {
     background-color: var(--white-color);
     color: var(--black-color);
     box-shadow: 0 2px 10px rgba(220, 220, 220, 0.1);
@@ -27,9 +27,13 @@ export const CustomHeader = styled.header<{ $isScrolled: boolean }>`
   }
 
   h1 {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     font-family: "DungGeunMo";
     font-weight: 500;
+
+    @media (max-width: 768px) {
+      font-size: 1.25rem;
+    }
   }
 
   .menu-img {

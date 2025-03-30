@@ -12,6 +12,7 @@ export const ProjectSection = styled.section`
   @media (max-width: 768px) {
     align-items: center;
     flex-direction: column;
+    max-width: 40rem;
   }
 `;
 
