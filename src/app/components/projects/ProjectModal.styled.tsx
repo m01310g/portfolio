@@ -193,6 +193,10 @@ export const ImageModalContainer = styled.div`
   position: relative;
   max-width: 90vw;
   max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
   .caption {
     color: var(--white-color);
