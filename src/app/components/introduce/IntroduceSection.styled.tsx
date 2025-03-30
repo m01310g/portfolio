@@ -9,6 +9,7 @@ export const IntroSection = styled.section`
   height: 100vh;
   gap: 1rem;
   align-self: center;
+  scroll-margin-top: 4.5rem;
 
   @media (max-width: 1024px) {
     height: auto;

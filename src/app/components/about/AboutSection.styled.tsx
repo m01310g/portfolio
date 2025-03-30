@@ -8,6 +8,7 @@ export const AboutMeSection = styled.section`
   max-width: 50rem;
   width: 100%;
   align-self: center;
+  scroll-margin-top: 4.5rem;
 
   @media (max-width: 768px) {
     align-items: center;

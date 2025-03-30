@@ -75,7 +75,7 @@ const HamburgerMenu = () => {
               </a>
             </MenuItem>
             <MenuItem>
-              <a onClick={() => handleMenuClick("About")}>
+              <a onClick={() => handleMenuClick("About_Me")}>
                 <span>&lt;</span>About_Me <span>/&gt;</span>
               </a>
             </MenuItem>
