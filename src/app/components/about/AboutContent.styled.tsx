@@ -7,6 +7,7 @@ export const ContentContainer = styled.div`
   gap: 1rem;
   width: 100%;
   align-items: center;
+  color: var(--white-color);
 
   h2 {
     color: var(--white-color);
