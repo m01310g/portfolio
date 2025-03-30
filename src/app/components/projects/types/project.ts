@@ -7,5 +7,5 @@ export interface Project {
   outline: string;
   features: string[];
   contributions: string[];
-  screenshots: string[];
+  screenshots: { src: string; caption: string }[];
 }

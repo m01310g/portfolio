@@ -1,4 +1,4 @@
-import { ReactNode, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import {
   ContributionList,
   FeatureList,
@@ -36,18 +36,18 @@ const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) => {
     screenshots,
   } = project;
 
-  const [selectedImage, setSelectedImage] = useState<string | null>(null);
+  const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
 
   useEffect(() => {
     const handleKeyDown = (e: KeyboardEvent) => {
-      if (e.key === "Escape" && !selectedImage) {
+      if (e.key === "Escape" && selectedIndex === null) {
         onClose();
       }
     };
 
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [onClose, selectedImage]);
+  }, [onClose, selectedIndex]);
 
   return (
     <ModalOverlay onClick={onClose}>
@@ -98,15 +98,17 @@ const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) => {
                     * 이미지 클릭 시 자세히 확인할 수 있습니다.
                   </p>
                   <ScreenshotGrid>
-                    {screenshots.map((src, idx) => (
-                      <Image
-                        key={idx}
-                        src={src}
-                        alt={`스크린샷 ${idx + 1}`}
-                        width={800}
-                        height={600}
-                        onClick={() => setSelectedImage(src)}
-                      />
+                    {screenshots.map((screenshot, idx) => (
+                      <div className="image-box" key={idx}>
+                        <Image
+                          src={screenshot.src}
+                          alt={`스크린샷 ${idx + 1}`}
+                          width={800}
+                          height={600}
+                          onClick={() => setSelectedIndex(idx)}
+                        />
+                        <p>{screenshot.caption}</p>
+                      </div>
                     ))}
                   </ScreenshotGrid>
                 </>
@@ -114,11 +116,13 @@ const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) => {
             </ScreenshotList>
           </main>
         </ModalContent>
-        {selectedImage && (
+
+        {selectedIndex !== null && (
           <FullScreenImageModal
-            src={selectedImage}
-            alt={`확대된 이미지`}
-            onClose={() => setSelectedImage(null)}
+            images={screenshots}
+            currentIndex={selectedIndex}
+            setCurrentIndex={setSelectedIndex}
+            onClose={() => setSelectedIndex(null)}
           />
         )}
       </ModalContainer>

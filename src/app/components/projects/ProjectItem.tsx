@@ -27,8 +27,8 @@ const ProjectItem = ({ project }: ProjectItemProps) => {
             className="project-image"
             src={thumbnail}
             alt={`${title} 이미지`}
-            width={100}
-            height={100}
+            width={500}
+            height={500}
           />
         </ImageBox>
         <ContentBox>

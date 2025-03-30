@@ -13,6 +13,22 @@ export const ModalOverlay = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  .arrow-left {
+    background-color: transparent;
+    position: absolute;
+    top: 50%;
+    left: 1rem;
+    cursor: pointer;
+  }
+
+  .arrow-right {
+    background-color: transparent;
+    position: absolute;
+    top: 50%;
+    right: 1rem;
+    cursor: pointer;
+  }
 `;
 
 export const ModalContainer = styled.div`
@@ -137,20 +153,38 @@ export const ContributionList = styled.div`
 
 export const ScreenshotGrid = styled.div`
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1rem;
 
-  img {
-    width: 100%;
-    height: auto;
-    aspect-ratio: 16/9;
-    border-radius: 8px;
-    cursor: pointer;
-    transition: transform 0.2s ease;
-    object-fit: cover;
+  .image-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    gap: 0.3rem;
 
-    &:hover {
-      transform: scale(1.03);
+    img {
+      position: relative;
+      width: 100%;
+      aspect-ratio: 16/9;
+      border-radius: 8px;
+      overflow: hidden;
+      cursor: pointer;
+      object-fit: cover;
+
+      &:hover {
+        transform: scale(1.03);
+      }
+    }
+
+    p {
+      color: var(--hover-color);
+      font-size: var(--font-size-sm);
+      text-align: center;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      width: 100%;
     }
   }
 `;
@@ -159,6 +193,11 @@ export const ImageModalContainer = styled.div`
   position: relative;
   max-width: 90vw;
   max-height: 90vh;
+
+  .caption {
+    color: var(--white-color);
+    text-align: center;
+  }
 
   .screenshot {
     max-width: 100%;
