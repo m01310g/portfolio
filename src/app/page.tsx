@@ -1,6 +1,7 @@
 "use client";
 
 import AboutSection from "./components/about/AboutSection";
+import Footer from "./components/footer/Footer";
 import Header from "./components/header/Header";
 import IntroduceSection from "./components/introduce/IntroduceSection";
 import ProjectsSection from "./components/projects/ProjectsSection";
@@ -17,6 +18,7 @@ const Page = () => {
         <ProjectsSection />
         <AboutSection />
       </Main>
+      <Footer />
     </>
   );
 };
