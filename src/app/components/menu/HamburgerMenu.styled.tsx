@@ -39,11 +39,13 @@ export const Menu = styled.div<{ $isMenuOpen: boolean }>`
   }
 `;
 
-export const MenuItem = styled.li`
+export const MenuItem = styled.li<{ $isActive: boolean }>`
   list-style: none;
   padding: 0.5rem 1.5rem;
   border-radius: 80px;
   cursor: pointer;
+  background-color: ${(props) =>
+    props.$isActive ? "rgba(0, 0, 0, 0.05)" : ""};
 
   &:hover {
     background-color: rgba(0, 0, 0, 0.05);

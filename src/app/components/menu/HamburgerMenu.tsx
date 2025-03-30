@@ -1,7 +1,15 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Button, Menu, MenuItem } from "./HamburgerMenu.styled";
 
-const HamburgerMenu = () => {
+interface HamburgerMenuProps {
+  selectedMenu: string;
+  setSelectedMenu: (menu: string) => void;
+}
+
+const HamburgerMenu = ({
+  selectedMenu,
+  setSelectedMenu,
+}: HamburgerMenuProps) => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
 
   const toggleMenu = () => {
@@ -13,8 +21,25 @@ const HamburgerMenu = () => {
     if (targetElement) {
       targetElement.scrollIntoView({ behavior: "smooth" });
       setIsMenuOpen(false);
+      setSelectedMenu(targetId);
     }
   };
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        setIsMenuOpen(false);
+      }
+    };
+
+    if (isMenuOpen) {
+      window.addEventListener("keydown", handleKeyDown);
+    }
+
+    return () => {
+      window.removeEventListener("keydown", handleKeyDown);
+    };
+  }, [isMenuOpen]);
 
   return (
     <>
@@ -56,32 +81,19 @@ const HamburgerMenu = () => {
           </svg>
         )}
       </Button>
-      {
-        <Menu $isMenuOpen={isMenuOpen}>
-          <ul>
-            <MenuItem>
-              <a onClick={() => handleMenuClick("Introduce")}>
-                <span>&lt;</span>Introduce <span>/&gt;</span>
+
+      <Menu $isMenuOpen={isMenuOpen}>
+        <ul>
+          {["Introduce", "Skills", "Projects", "About_Me"].map((menu) => (
+            <MenuItem key={menu} $isActive={selectedMenu === menu}>
+              <a onClick={() => handleMenuClick(menu)}>
+                <span>&lt;</span>
+                {menu} <span>/&gt;</span>
               </a>
             </MenuItem>
-            <MenuItem>
-              <a onClick={() => handleMenuClick("Skills")}>
-                <span>&lt;</span>Skills <span>/&gt;</span>
-              </a>
-            </MenuItem>
-            <MenuItem>
-              <a onClick={() => handleMenuClick("Projects")}>
-                <span>&lt;</span>Projects <span>/&gt;</span>
-              </a>
-            </MenuItem>
-            <MenuItem>
-              <a onClick={() => handleMenuClick("About_Me")}>
-                <span>&lt;</span>About_Me <span>/&gt;</span>
-              </a>
-            </MenuItem>
-          </ul>
-        </Menu>
-      }
+          ))}
+        </ul>
+      </Menu>
     </>
   );
 };
