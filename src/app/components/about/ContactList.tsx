@@ -15,7 +15,7 @@ const ContactList = () => {
       <ContactContainer>
         <ContactItem>
           <Image
-            src={"/icons/github_white.png"}
+            src={"/icons/github_white.webp"}
             alt="깃허브 아이콘"
             width={25}
             height={25}
@@ -30,7 +30,7 @@ const ContactList = () => {
         </ContactItem>
         <ContactItem>
           <Image
-            src={"/icons/mail.png"}
+            src={"/icons/mail.webp"}
             alt="메일 아이콘"
             width={25}
             height={25}

@@ -32,7 +32,7 @@ const ModalHeader = ({
         {githubUrl && (
           <Link href={githubUrl} target="_blank" rel="noopener noreferrer">
             <Image
-              src={"/icons/github_white.png"}
+              src={"/icons/github_white.webp"}
               alt="깃허브 아이콘"
               width={30}
               height={30}
