@@ -3,7 +3,10 @@ import { useEffect } from "react";
 import CloseButton from "../closeButton/CloseButton";
 import ArrowButton from "./ArrowButton";
 import { ModalOverlay } from "./modal/ProjectModal.styled";
-import { ImageModalContainer } from "./FullScreenImageModal.styled";
+import {
+  ImageModalContainer,
+  ImageWrapper,
+} from "./FullScreenImageModal.styled";
 
 interface FullScreenImageModal {
   images: { src: string; caption: string }[];
@@ -38,29 +41,31 @@ const FullScreenImageModal = ({
       <CloseButton onClose={onClose} />
       <ImageModalContainer onClick={(e) => e.stopPropagation()}>
         <p className="caption">{images[currentIndex].caption}</p>
-        <Image
-          className="screenshot"
-          src={images[currentIndex].src}
-          alt={images[currentIndex].caption}
-          width={1000}
-          height={1000}
-        />
-        {currentIndex > 0 && (
-          <ArrowButton
-            setCurrentIndex={setCurrentIndex}
-            currentIndex={currentIndex}
-            images={images}
-            direction="left"
+        <ImageWrapper>
+          {currentIndex > 0 && (
+            <ArrowButton
+              setCurrentIndex={setCurrentIndex}
+              currentIndex={currentIndex}
+              images={images}
+              direction="left"
+            />
+          )}
+          <Image
+            className="screenshot"
+            src={images[currentIndex].src}
+            alt={images[currentIndex].caption}
+            width={1000}
+            height={1000}
           />
-        )}
-        {currentIndex < images.length - 1 && (
-          <ArrowButton
-            setCurrentIndex={setCurrentIndex}
-            currentIndex={currentIndex}
-            images={images}
-            direction="right"
-          />
-        )}
+          {currentIndex < images.length - 1 && (
+            <ArrowButton
+              setCurrentIndex={setCurrentIndex}
+              currentIndex={currentIndex}
+              images={images}
+              direction="right"
+            />
+          )}
+        </ImageWrapper>
       </ImageModalContainer>
     </ModalOverlay>
   );

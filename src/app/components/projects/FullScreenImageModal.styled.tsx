@@ -26,17 +26,18 @@ export const ImageModalContainer = styled.div`
 
   .arrow-left {
     background-color: transparent;
-    position: absolute;
-    top: 50%;
-    left: -2rem;
     cursor: pointer;
   }
 
   .arrow-right {
     background-color: transparent;
-    position: absolute;
-    top: 50%;
-    right: -2rem;
     cursor: pointer;
   }
+`;
+
+export const ImageWrapper = styled.div`
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
 `;
