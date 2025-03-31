@@ -4,6 +4,8 @@ import { SimpleIcon } from "simple-icons";
 const exceptions: Record<string, keyof typeof icons | string> = {
   "next.js": "siNextdotjs",
   "styled-components": "siStyledcomponents",
+  "node.js": "siNodedotjs",
+  "socket.io": "siSocketdotio",
   팀: "#4CAF50",
   개인: "#2196F3",
 };
