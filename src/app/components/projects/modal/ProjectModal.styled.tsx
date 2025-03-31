@@ -32,13 +32,17 @@ export const ModalOverlay = styled.div`
 export const ModalContainer = styled.div`
   position: relative;
   border-radius: 16px;
-  max-width: 90%;
+  max-width: 70%;
   max-height: 90%;
   width: 90%;
   overflow-y: auto;
   display: flex;
   flex-direction: column;
   gap: 1rem;
+
+  @media (max-width: 768px) {
+    max-width: 90%;
+  }
 
   .screenshot {
     height: 100%;

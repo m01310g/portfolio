@@ -8,4 +8,6 @@ export interface Project {
   features: string[];
   contributions: string[];
   screenshots?: { src: string; caption: string }[];
+  deployUrl?: string;
+  githubUrl?: string;
 }

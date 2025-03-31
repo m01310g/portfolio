@@ -31,6 +31,8 @@ const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) => {
     features,
     contributions,
     screenshots,
+    deployUrl,
+    githubUrl,
   } = project;
 
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
@@ -51,7 +53,13 @@ const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) => {
       <CloseButton onClose={onClose} />
       <ModalContainer onClick={(e) => e.stopPropagation()}>
         <ModalContent>
-          <ModalHeader title={title} period={period} tag={tag} />
+          <ModalHeader
+            title={title}
+            period={period}
+            tag={tag}
+            githubUrl={githubUrl || ""}
+            deployUrl={deployUrl || ""}
+          />
           <main>
             <Image
               className="thumbnail"
