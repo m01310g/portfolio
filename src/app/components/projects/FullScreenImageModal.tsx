@@ -31,7 +31,7 @@ const FullScreenImageModal = ({
 
     window.addEventListener("keydown", handleKeyDown);
     return () => window.removeEventListener("keydown", handleKeyDown);
-  }, [onClose]);
+  }, [onClose, currentIndex, images.length, setCurrentIndex]);
 
   return (
     <ModalOverlay onClick={onClose}>

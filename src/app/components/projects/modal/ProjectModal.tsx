@@ -21,21 +21,6 @@ interface ProjectModalProps {
 }
 
 const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) => {
-  if (!isOpen) return null;
-
-  const {
-    period,
-    title,
-    tag,
-    thumbnail,
-    outline,
-    features,
-    contributions,
-    screenshots,
-    deployUrl,
-    githubUrl,
-  } = project;
-
   const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
 
   useEffect(() => {
@@ -53,6 +38,21 @@ const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) => {
       document.body.style.overflow = "";
     };
   }, [onClose, selectedIndex]);
+
+  if (!isOpen) return null;
+
+  const {
+    period,
+    title,
+    tag,
+    thumbnail,
+    outline,
+    features,
+    contributions,
+    screenshots,
+    deployUrl,
+    githubUrl,
+  } = project;
 
   return (
     <ModalOverlay onClick={onClose}>
