@@ -12,6 +12,7 @@ import { Project } from "../types/project";
 import ModalHeader from "./ModalHeader";
 import ScreenshotList from "./ScreenshotList";
 import ModalList from "./ModalList";
+import ReactMarkdown from "react-markdown";
 
 interface ProjectModalProps {
   isOpen: boolean;
@@ -73,7 +74,9 @@ const ProjectModal = ({ isOpen, onClose, project }: ProjectModalProps) => {
               height={900}
               alt={`${title} 대표 사진`}
             />
-            <Outline>{outline}</Outline>
+            <Outline>
+              <ReactMarkdown>{outline}</ReactMarkdown>
+            </Outline>
             <ModalList title={"💡 Features"} items={features} />
             <ModalList title={"👩🏻‍💻 Contributions"} items={contributions} />
 

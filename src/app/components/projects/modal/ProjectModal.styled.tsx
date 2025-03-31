@@ -53,7 +53,7 @@ export const ModalContent = styled.div`
   }
 `;
 
-export const Outline = styled.p`
+export const Outline = styled.div`
   font-weight: 500;
   text-align: center;
   line-height: 1.6;

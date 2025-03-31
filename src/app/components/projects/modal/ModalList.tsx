@@ -1,3 +1,4 @@
+import ReactMarkdown from "react-markdown";
 import { ModalListWrapper } from "./ModalList.styled";
 
 interface ModalListProps {
@@ -11,7 +12,9 @@ const ModalList = ({ title, items }: ModalListProps) => {
       <h3>{title}</h3>
       <ul>
         {items.map((item, idx) => (
-          <li key={idx}>{item}</li>
+          <li key={idx}>
+            <ReactMarkdown>{item}</ReactMarkdown>
+          </li>
         ))}
       </ul>
     </ModalListWrapper>
