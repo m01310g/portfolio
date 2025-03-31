@@ -12,7 +12,7 @@ export const SkillBox = styled.div`
 
   h2 {
     color: var(--white-color);
-    font-family: "DungGeunMo";
+    font-family: var(--font-dunggeunmo);
   }
 
   ul {

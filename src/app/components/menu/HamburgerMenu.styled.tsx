@@ -53,7 +53,7 @@ export const MenuItem = styled.li<{ $isActive: boolean }>`
 
   a {
     font-size: var(--font-size-xl);
-    font-family: "DungGeunMo";
+    font-family: var(--font-dunggeunmo);
     font-weight: 400;
     color: var(--secondary-color);
 

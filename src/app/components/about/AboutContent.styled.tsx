@@ -11,7 +11,7 @@ export const ContentContainer = styled.div`
 
   h2 {
     color: var(--white-color);
-    font-family: "DungGeunMo";
+    font-family: var(--font-dunggeunmo);
     font-weight: 400;
     font-size: var(--font-size-xl);
   }

@@ -5,7 +5,7 @@ export const Button = styled.button<{
   $isScrolled: boolean;
 }>`
   color: var(--secondary-color);
-  font-family: "DungGeunMo";
+  font-family: var(--font-dunggeunmo);
   background-color: ${(props) =>
     props.$isActive
       ? props.$isScrolled

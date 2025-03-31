@@ -161,7 +161,7 @@ export const MoreButton = styled.button`
   align-self: center;
   justify-self: center;
   border-radius: 30px;
-  font-family: "DungGeunMo";
+  font-family: var(--font-dunggeunmo);
   background-color: var(--yellow-color);
   cursor: pointer;
 

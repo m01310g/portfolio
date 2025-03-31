@@ -28,7 +28,7 @@ export const CustomHeader = styled.header<{ $isScrolled: boolean }>`
 
   h1 {
     font-size: 1.3rem;
-    font-family: "DungGeunMo";
+    font-family: var(--font-dunggeunmo);
     font-weight: 500;
 
     @media (max-width: 768px) {
