@@ -17,9 +17,26 @@ export const ImageModalContainer = styled.div`
   .screenshot {
     max-width: 100%;
     max-height: 80vh;
+    min-width: 15rem;
     width: auto;
     height: auto;
     object-fit: contain;
     display: block;
+  }
+
+  .arrow-left {
+    background-color: transparent;
+    position: absolute;
+    top: 50%;
+    left: -2rem;
+    cursor: pointer;
+  }
+
+  .arrow-right {
+    background-color: transparent;
+    position: absolute;
+    top: 50%;
+    right: -2rem;
+    cursor: pointer;
   }
 `;

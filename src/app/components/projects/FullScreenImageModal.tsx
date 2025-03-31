@@ -45,23 +45,23 @@ const FullScreenImageModal = ({
           width={1000}
           height={1000}
         />
+        {currentIndex > 0 && (
+          <ArrowButton
+            setCurrentIndex={setCurrentIndex}
+            currentIndex={currentIndex}
+            images={images}
+            direction="left"
+          />
+        )}
+        {currentIndex < images.length - 1 && (
+          <ArrowButton
+            setCurrentIndex={setCurrentIndex}
+            currentIndex={currentIndex}
+            images={images}
+            direction="right"
+          />
+        )}
       </ImageModalContainer>
-      {currentIndex > 0 && (
-        <ArrowButton
-          setCurrentIndex={setCurrentIndex}
-          currentIndex={currentIndex}
-          images={images}
-          direction="left"
-        />
-      )}
-      {currentIndex < images.length - 1 && (
-        <ArrowButton
-          setCurrentIndex={setCurrentIndex}
-          currentIndex={currentIndex}
-          images={images}
-          direction="right"
-        />
-      )}
     </ModalOverlay>
   );
 };

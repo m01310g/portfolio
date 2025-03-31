@@ -11,22 +11,6 @@ export const ModalOverlay = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-
-  .arrow-left {
-    background-color: transparent;
-    position: absolute;
-    top: 50%;
-    left: 1rem;
-    cursor: pointer;
-  }
-
-  .arrow-right {
-    background-color: transparent;
-    position: absolute;
-    top: 50%;
-    right: 1rem;
-    cursor: pointer;
-  }
 `;
 
 export const ModalContainer = styled.div`
