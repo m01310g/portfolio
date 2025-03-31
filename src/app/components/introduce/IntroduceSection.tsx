@@ -45,10 +45,11 @@ const IntroduceSection = () => {
         </div>
         <ImageWrapper>
           <Image
-            src={"/intro.png"}
+            src={"/intro.webp"}
             width={400}
             height={400}
             alt="인사하는 이모지"
+            priority
           />
         </ImageWrapper>
       </div>
