@@ -7,8 +7,8 @@ import {
   TagList,
 } from "./ProjectItem.styled";
 import Image from "next/image";
-import ProjectModal from "./ProjectModal";
 import { Project } from "./types/project";
+import ProjectModal from "./modal/ProjectModal";
 
 interface ProjectItemProps {
   project: Project;

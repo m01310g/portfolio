@@ -1,8 +1,9 @@
 import Image from "next/image";
-import { ImageModalContainer, ModalOverlay } from "./ProjectModal.styled";
 import { useEffect } from "react";
 import CloseButton from "../closeButton/CloseButton";
 import ArrowButton from "./ArrowButton";
+import { ModalOverlay } from "./modal/ProjectModal.styled";
+import { ImageModalContainer } from "./FullScreenImageModal.styled";
 
 interface FullScreenImageModal {
   images: { src: string; caption: string }[];
