@@ -19,10 +19,13 @@ export const ItemContainer = styled.div`
   }
 `;
 
-export const ImageBox = styled.div`
+export const ImageWrapper = styled.div`
   aspect-ratio: 16/9;
   overflow: hidden;
   align-items: center;
+  background-color: #4f526d;
+  border-top-right-radius: 16px;
+  border-top-left-radius: 16px;
 `;
 
 export const ContentBox = styled.div`

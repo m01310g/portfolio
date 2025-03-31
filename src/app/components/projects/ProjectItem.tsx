@@ -1,7 +1,7 @@
 import { useState } from "react";
 import {
   ContentBox,
-  ImageBox,
+  ImageWrapper,
   ItemContainer,
   Tag,
   TagList,
@@ -22,7 +22,7 @@ const ProjectItem = ({ project }: ProjectItemProps) => {
   return (
     <>
       <ItemContainer onClick={() => setIsOpen(true)}>
-        <ImageBox>
+        <ImageWrapper>
           <Image
             className="project-image"
             src={thumbnail}
@@ -30,7 +30,7 @@ const ProjectItem = ({ project }: ProjectItemProps) => {
             width={500}
             height={500}
           />
-        </ImageBox>
+        </ImageWrapper>
         <ContentBox>
           <h3 className="title">{title}</h3>
           <p className="period">{period}</p>
