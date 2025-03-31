@@ -40,4 +40,8 @@ export const ImageWrapper = styled.div`
   gap: 1rem;
   justify-content: center;
   align-items: center;
+
+  .button-wrapper {
+    min-width: 12px;
+  }
 `;

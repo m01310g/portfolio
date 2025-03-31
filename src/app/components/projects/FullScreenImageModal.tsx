@@ -42,14 +42,17 @@ const FullScreenImageModal = ({
       <ImageModalContainer onClick={(e) => e.stopPropagation()}>
         <p className="caption">{images[currentIndex].caption}</p>
         <ImageWrapper>
-          {currentIndex > 0 && (
-            <ArrowButton
-              setCurrentIndex={setCurrentIndex}
-              currentIndex={currentIndex}
-              images={images}
-              direction="left"
-            />
-          )}
+          <div className="button-wrapper">
+            {currentIndex > 0 && (
+              <ArrowButton
+                setCurrentIndex={setCurrentIndex}
+                currentIndex={currentIndex}
+                images={images}
+                direction="left"
+              />
+            )}
+          </div>
+
           <Image
             className="screenshot"
             src={images[currentIndex].src}
@@ -57,14 +60,16 @@ const FullScreenImageModal = ({
             width={1000}
             height={1000}
           />
-          {currentIndex < images.length - 1 && (
-            <ArrowButton
-              setCurrentIndex={setCurrentIndex}
-              currentIndex={currentIndex}
-              images={images}
-              direction="right"
-            />
-          )}
+          <div className="button-wrapper">
+            {currentIndex < images.length - 1 && (
+              <ArrowButton
+                setCurrentIndex={setCurrentIndex}
+                currentIndex={currentIndex}
+                images={images}
+                direction="right"
+              />
+            )}
+          </div>
         </ImageWrapper>
       </ImageModalContainer>
     </ModalOverlay>
