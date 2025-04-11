@@ -6,6 +6,7 @@ const exceptions: Record<string, keyof typeof icons | string> = {
   "styled-components": "siStyledcomponents",
   "node.js": "siNodedotjs",
   "socket.io": "siSocketdotio",
+  "react query": "siReactquery",
   팀: "#4CAF50",
   개인: "#2196F3",
 };

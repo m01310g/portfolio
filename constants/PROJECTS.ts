@@ -10,6 +10,7 @@ export const PROJECTS: Project[] = [
       "TypeScript",
       "Next.js",
       "Styled-Components",
+      "React Query",
       "PostgreSQL",
     ],
     description: "누구나 웹 소설을 연재할 수 있는 서비스",
