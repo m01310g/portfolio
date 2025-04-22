@@ -2,7 +2,7 @@ import { Project } from "@/app/components/projects/types/project";
 
 export const PROJECTS: Project[] = [
   {
-    period: "2025.02 - 진행 중",
+    period: "2025.02 - 2025.04",
     title: "Fungle",
     tag: [
       "팀",
