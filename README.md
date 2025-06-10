@@ -24,6 +24,18 @@
 └── 📜 README.md       # 프로젝트 설명
 ```
 
+## 프로젝트 스크린샷
+1. 소개 화면
+   ![image](https://github.com/user-attachments/assets/d543e474-7e57-4cb7-8f0c-b28bba419672)
+2. 스킬 목록
+  ![image](https://github.com/user-attachments/assets/827dd17a-8ebd-4ea2-b487-d384850908a3)
+3. 프로젝트 목록
+   ![image](https://github.com/user-attachments/assets/9e595a53-39d8-4fae-a84d-52466716b0d4)
+4. 프로젝트 모달
+   ![image](https://github.com/user-attachments/assets/69eb3b26-17f8-43f1-a2ad-d4ceec9c2ed9)
+5. 자격증 및 연락처
+   ![image](https://github.com/user-attachments/assets/3b8eb201-a66f-446e-84a4-5a526ab5da53)
+
 ## ‼️ 설치 가이드
 1. 저장소 클론
 ```plaintext
