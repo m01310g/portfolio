@@ -7,6 +7,7 @@ const exceptions: Record<string, keyof typeof icons | string> = {
   "node.js": "siNodedotjs",
   "socket.io": "siSocketdotio",
   "react query": "siReactquery",
+  "tailwind css": "siTailwindcss",
   팀: "#4CAF50",
   개인: "#2196F3",
 };

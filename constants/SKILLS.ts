@@ -19,5 +19,6 @@ export const SKILLS = {
     { name: "MySQL", icon: "devicon-mysql-plain colored" },
     { name: "Prisma", icon: "devicon-prisma-plain colored" },
     { name: "Supabase", icon: "devicon-supabase-plain colored" },
+    { name: "React Query", icon: "" },
   ],
 };
