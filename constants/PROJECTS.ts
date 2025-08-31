@@ -2,6 +2,112 @@ import { Project } from "@/app/components/projects/types/project";
 
 export const PROJECTS: Project[] = [
   {
+    period: "2025.06 - 2025.07",
+    title: "빌리지",
+    tag: [
+      "팀",
+      "React",
+      "TypeScript",
+      "Next.js",
+      "Tailwind CSS",
+      "Zustand",
+      "React Query",
+    ],
+    description: "헬스 트레이너를 위한 커뮤니티/채용 서비스 플랫폼",
+    thumbnail: "/project5/thumbnail.webp",
+    outline: `**빌리지(Village)** 는 피트니스 분야 인재들의 채용을 돕는 전문 매칭 서비스입니다.
+    현재 피트니스 인재들을 위한 **소셜 네트워킹 서비스**를 운영 중이며, 해당 사이트에 등록된 인재 정보를 기반으로 매칭 서비스를 제공하고 있습니다.
+    **해당 지역에서 구직/이직을 희망**하는 **수도권 체육 대학 출신** 피트니스 인재들을 선별하여 매칭해드립니다.
+    *(2025년 6월 말 서비스를 오픈했지만, 현재는 서버비 문제로 인해 서비스가 닫힌 상태입니다.)*`,
+    features: [
+      "헬스 트레이너가 동종 업계 종사자와 **실명으로 간편하게 소통** 가능",
+      "헬스 트레이너의 동종 업계 종사자들과 실명 기반의 **신뢰도 높은 네트워크 형성**",
+      "여러 플랫폼에 흩어진 구인 정보를 한 곳에서 **효율적으로 탐색**",
+    ],
+    contributions: [
+      "이미지 최적화 비용 관리를 위한 **CloudFront 및 이미지 리사이징 적용**",
+      "무한 스크롤 기능 구현",
+      "Zustand를 활용한 **카테고리, 지역, 검색어 상태 전역 관리**",
+      "React Query를 활용한 **서버 상태 관리 및 캐싱**",
+      "Tailwind CSS를 활용한 **반응형 UI 컴포넌트 개발**",
+      "서비스 사용자 분석을 위한 **Amplitude 연동**",
+      "프로필 등록 여부에 따른 등록 유도 모달 구현",
+    ],
+    screenshots: [
+      {
+        src: "/project5/프로필-비로그인.webp",
+        caption: "프로필 - 비로그인 사용자",
+      },
+      {
+        src: "/project5/프로필-로그인.webp",
+        caption: "프로필 - 로그인된 사용자",
+      },
+      { src: "/project5/설정.webp", caption: "설정 화면" },
+      {
+        src: "/project5/서비스이용약관.webp",
+        caption: "서비스 이용 약관 화면",
+      },
+      { src: "/project5/큐앤에이.webp", caption: "Q&A 화면" },
+      { src: "/project5/큐앤에이-펼침.webp", caption: "Q&A 드롭다운 활성화" },
+      { src: "/project5/프로필-수정.webp", caption: "프로필 - 수정 화면" },
+      {
+        src: "/project5/프로필-등록유도모달.webp",
+        caption: "프로필 - 등록 유도 모달",
+      },
+      {
+        src: "/project5/커뮤니티.webp",
+        caption: "커뮤니티 화면 - 사용자가 작성한 게시글 조회",
+      },
+
+      {
+        src: "/project5/게시글-상세.webp",
+        caption: "커뮤니티 화면 - 게시글 상세 조회",
+      },
+      {
+        src: "/project5/게시글등록-글입력.webp",
+        caption: "커뮤니티 화면 - 게시글 등록",
+      },
+      {
+        src: "/project5/게시글-수정삭제모달.webp",
+        caption: "커뮤니티 화면 - 게시글 수정/삭제 바텀 시트",
+      },
+      {
+        src: "/project5/게시글검색-결과.webp",
+        caption: "커뮤니티 화면 - 게시글 검색 결과",
+      },
+      {
+        src: "/project5/게시글검색-엠티뷰.webp",
+        caption: "커뮤니티 화면 - 게시글 검색 엠티 뷰",
+      },
+      {
+        src: "/project5/댓글-입력.webp",
+        caption: "커뮤니티 화면 - 댓글 입력",
+      },
+      { src: "/project5/댓글-등록.webp", caption: "커뮤니티 화면 - 댓글 등록" },
+      {
+        src: "/project5/댓글-삭제모달.webp",
+        caption: "커뮤니티 화면 - 댓글 삭제 바텀 시트",
+      },
+      {
+        src: "/project5/채용공고-기본.webp",
+        caption: "채용 공고 화면 - 여러 플랫폼에 게시된 채용 공고 조회",
+      },
+      {
+        src: "/project5/채용공고-상세.webp",
+        caption: "채용 공고 화면 - 상세 조회",
+      },
+      {
+        src: "/project5/채용공고-검색필터링.webp",
+        caption: "채용 공고 화면 - 검색 키워드 입력",
+      },
+      {
+        src: "/project5/채용공고-지역필터링.webp",
+        caption: "채용 공고 화면 - 지역 조건 설정",
+      },
+    ],
+    githubUrl: "https://github.com/m01310g/Village",
+  },
+  {
     period: "2025.02 - 2025.04",
     title: "Fungle",
     tag: [
@@ -15,7 +121,7 @@ export const PROJECTS: Project[] = [
     ],
     description: "누구나 웹 소설을 연재할 수 있는 서비스",
     thumbnail: "/project1/thumbnail.webp",
-    outline: `2022년 기준, 웹 소설의 시장 규모는 1조 390억원에 달했습니다.웹 소설은 빠르게 성장하는 콘텐츠 사업 중 하나이지만, 작가가 정식으로 데뷔할 수 있는 기회는 제한적입니다. 특히, 독자들이 좋아하는 작품을 직접 후원하거나 펀딩 진행 상황을 한 곳에서 확인하기 어려운 문제가 있습니다.
+    outline: `2022년 기준, 웹 소설의 시장 규모는 1조 390억원에 달했습니다. 웹 소설은 빠르게 성장하는 콘텐츠 사업 중 하나이지만, 작가가 정식으로 데뷔할 수 있는 기회는 제한적입니다. 특히, 독자들이 좋아하는 작품을 직접 후원하거나 펀딩 진행 상황을 한 곳에서 확인하기 어려운 문제가 있습니다.
     우리는 단순한 연재 플랫폼이 아닌 **펀딩 시스템을 통해 작가가 정식 데뷔**할 수 있도록 지원하는 새로운 형태의 창작 생태계를 제공하기 위해 **'펀글(Fungle)'** 을 만들었습니다.`,
     features: [
       "**간단한 연재 시스템**으로 아이디어가 있는 누구나 손쉽게 소설 업로드 가능",
